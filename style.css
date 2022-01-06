@@ -1,0 +1,75 @@
+html {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    min-height: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.body {
+    display: flex;
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    flex-basis: 100%;
+    background: linear-gradient(180deg, rgb(37, 118, 192) 30%, rgb(91, 155, 186) 68%, rgb(81, 194, 76) 45%);
+    background-repeat: no-repeat;
+}
+
+main {
+    flex: 1 0 100%;
+    position: relative;
+}
+
+/*
+.sun {
+    width: 15%;
+    height: 15%;
+    position: absolute;
+    left: 20px;
+    top: 40px;
+    transform: rotate(0deg);
+    animation: sun 2s ease-in-out infinite;
+    -webkit-animation: 2s linear 0s normal none infinite running sun;
+}
+*/
+.sun img {
+    animation: 1s linear 0s normal none infinite running sun;
+    -webkit-animation: 2s linear 0s normal none infinite running sun;
+    width: 15%;
+
+}
+
+@keyframes sun {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@-webkit-keyframes sun {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.ball {
+    width: 8%;
+    position: absolute;
+    left: 50%;
+    top: 50px;
+    animation: ball 2s ease-in-out infinite alternate;
+}
+
+.ball img {
+    width: 100%;
+}
+
+@keyframes ball {
+    to {
+        top: 500px;
+    }
+}
